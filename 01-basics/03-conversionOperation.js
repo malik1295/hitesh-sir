@@ -8,7 +8,15 @@
 //now Number(score) will convert string score into number
 // console.log(valueInScore);//45
 /*but if the number is "45abc" then its type will be changed to number but it is not a number*/
-let score="45abc"
+// let score="45abc"
+// let valueInScore=Number(score)
+// console.log(typeof valueInScore)//number
+// console.log(valueInScore)//NaN
+/*so its look like string is converted into number but it is not a number as you see
+*/
+//now see if value of score wass null
+let score=null
+console.log(typeof score)
 let valueInScore=Number(score)
 console.log(typeof valueInScore)//number
-console.log(valueInScore)//NaN
+console.log(valueInScore)// 0
