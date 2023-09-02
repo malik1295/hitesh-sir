@@ -4,11 +4,11 @@
 1.premittive
 2.non premitive or referance type
 */
-/* #premitive
+/* #premitive(stored in stack)
 ===>these are call by value data types 
 ===> 7 types=> string,number,boolean,null,undefined,symbol,bigInt
 */
-/* #referance type or non premitive
+/* #referance type or non premitive(stored in heap memory)
 these are the values whose referance is allocated to you in memory
 ==> types =>arrays,objects,functions
 */
