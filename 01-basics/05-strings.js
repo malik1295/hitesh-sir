@@ -35,6 +35,14 @@ there are lot of methods in prortype if u open it so we must have to master thes
 // TO CONVERT INTO upper case
 // console.log(myName.toUpperCase());//REHMAN
 // to find what character is at certain position we use CharAt()
-console.log(myName.charAt(2));//h
+// console.log(myName.charAt(2));//h
 //for the position of character use indexOf() as reverse of above method
-console.log(myName.indexOf('h'));//2
+// console.log(myName.indexOf('h'));//2
+// to devide a string into a substring we can use this
+// console.log(myName.substring(0,3));//Reh
+//note that it does not include the chracter at 3 also negative values canno be passed
+//to cut a portion of string we use slice method as 
+// console.log(myName.slice(0,4));//Rehm
+//again value at 4th index is not include
+//we can use negative value in slice also
+console.log(myName.slice(-6,4));//Rehm
