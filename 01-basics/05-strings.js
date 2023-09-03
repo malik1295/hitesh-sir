@@ -28,3 +28,13 @@ length: 6
 
 there are lot of methods in prortype if u open it so we must have to master these mthods as much as possible
 */
+//to access keys we can do this
+// console.log(myName[0]);//R
+//to check length
+// console.log(myName.length);//6
+// TO CONVERT INTO upper case
+// console.log(myName.toUpperCase());//REHMAN
+// to find what character is at certain position we use CharAt()
+console.log(myName.charAt(2));//h
+//for the position of character use indexOf() as reverse of above method
+console.log(myName.indexOf('h'));//2
