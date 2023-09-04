@@ -50,5 +50,37 @@ if u do this in browser console you will find lot of properties related to this 
 //********abs()=>for absolute value*****//
 // console.log(Math.abs(-4));//4
 //********round()=>for roundoff ********//
-console.log(Math.round(6.8));//7
-//you see this is 
+// console.log(Math.round(6.8));//7
+/*
+you see this is noraml roundd of but if we want to control i.e we want to round above or below we can use some other methods as
+*/
+//************ceil()*************//
+// console.log(Math.ceil(4.3));//5
+/*
+see this rounds to the above integer */
+//*********floor()************//
+// console.log(Math.floor(6.8));//6
+//this rounds to lower integer
+//******min() and max()***************//
+/*
+this is used to find the minimum value in the array similarlay max is used to find maximum value in array
+*/
+// console.log(Math.min(6,4,8,2,9,7));//2
+// console.log(Math.max(6,4,8,2,9,7));//9
+//**********random()***********//
+// console.log(Math.random());
+/*
+this gives you any random number between 0 and 1 we need such numbers in situation like games such as dice where u need numbers between 1 and 6 so wee need them in organized way*/
+/*
+console.log(Math.random()*10);
+this give random number between 1 and 10 
+*/
+// console.log(Math.random()*10);
+/*
+but what if random() gives 0 then this will not give number between 1 and 10 so to avoid this the above is written with +1 inside as
+console.log((Math.random()*10)+1);
+this garantees that number will be greater than 1 or at least 1
+*/
+// console.log((Math.random()*10)+1);
+//with Math.floor
+// console.log(Math.floor(Math.random()*10)+1);
