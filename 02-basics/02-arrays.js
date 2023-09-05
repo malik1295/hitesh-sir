@@ -32,7 +32,7 @@ this returns a new array with all sub array elements concatinated to it recursiv
 */
 const anotherArray=[1,2,3,[4,5,6],7,[6,7,[4,5]]];
 const anotherArrayFull= anotherArray.flat(Infinity);
-console.log(anotherArrayFull);
+// console.log(anotherArrayFull);
 /*
 [
   1, 2, 3, 4, 5,
@@ -40,3 +40,26 @@ console.log(anotherArrayFull);
   5
 ]
 */
+// use of**Array.from ** to form array from string 
+// first check about string 
+console.log(Array.isArray("Rehman"));
+//false
+//means not an array
+// console.log(Array.from("Rehman"));
+// [ 'R', 'e', 'h', 'm', 'a', 'n' ]
+// if you give an object it will be interesting see
+console.log(Array.from({name:"Rehman"}));
+// []
+// this is empty string
+/*
+so for object it will be important to tell that which thing is to be converted into string the keys or the values
+*/
+//*****Array.of*********//
+/*
+this returns a new array from set of elements  the set of elements may be variables,arays 
+*/
+let score1=100
+let score2=200
+let score3=300
+console.log(Array.of(score1,score2,score3));
+// [ 100, 200, 300 ]
