@@ -57,15 +57,15 @@ such as myArr.slice(1,4) gives you copy of myArr from index 1 to index 3 i.e 4 i
 */
 // let myArr=[1,2,3,4,5,true,"rehman"];
 // let mynewArr1=myArr.slice(1,4);
-// console.log("1st",myArr);
-// console.log("2nd",mynewArr1);
+// console.log("orignal",myArr);
+// console.log("new",mynewArr1);
 // 1st [ 1, 2, 3, 4, 5, true, 'rehman' ]
 // 2nd [ 2, 3, 4 ]
 //*******splice()************//
 let myArr=[1,2,3,4,5,true,"rehman"];
 let mynewArr2=myArr.splice(1,4);
-console.log("1st",myArr);
-console.log("2nd",mynewArr2);
+console.log("orignal",myArr);
+console.log("new",mynewArr2);
 // 1st [ 1, true, 'rehman' ]
 // 2nd [ 2, 3, 4, 5 ]
 /* 
