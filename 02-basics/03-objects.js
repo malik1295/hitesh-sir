@@ -106,7 +106,7 @@ function does not execute only its referance comes why this because greetings is
 //*****lets form another function 
 /*
 to refer nmae we can use this.name in the string interpolation 
-==> this is used to refer the same object means JsUser and to refer its properties  
+==> this is used to refer the same object means JsUser and to refer its properties such as name
 */
 jsUser.greetingsTwo=function(){
     console.log(`Hello Js user ,${this.name}`);
