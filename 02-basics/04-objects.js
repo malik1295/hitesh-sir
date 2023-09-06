@@ -99,3 +99,5 @@ console.log(Object.entries(tinderUser));
 this we can use to check that whether the object has the specified propert it returns true if property exist otherwise false
 */
 console.log(tinderUser.hasOwnProperty("isLogedIn"));//true
+
+//*****object destructuring**********//
