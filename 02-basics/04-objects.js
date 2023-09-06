@@ -76,20 +76,20 @@ but first one is preferred more because you give empty {} and want that both obj
  tinderUser.id="123abc"
  tinderUser.name="naeem"
  tinderUser.isLogedIn=false
- console.log(tinderUser);
+//  console.log(tinderUser);
  //{ id: '123abc', name: 'naeem', isLogedIn: false }
 //*****to access keys 
-console.log(Object.keys(tinderUser));
+// console.log(Object.keys(tinderUser));
 // [ 'id', 'name', 'isLogedIn' ]
 //******to access values
-console.log(Object.values(tinderUser));
+// console.log(Object.values(tinderUser));
 // [ '123abc', 'naeem', false ]
 /*
 ***********important result************
 see the keys and values come in array so it very usefull to store these in a variable and then run methods lke loops  to access all these keys or values
 */
 //********.entries()**********//
-console.log(Object.entries(tinderUser));
+// console.log(Object.entries(tinderUser));
 /*
 ==>returns array in which all key value pairs become seperate array 
  [ [ 'id', '123abc' ], [ 'name', 'naeem' ], [ 'isLogedIn', false ] ]
@@ -98,6 +98,39 @@ console.log(Object.entries(tinderUser));
 /*
 this we can use to check that whether the object has the specified propert it returns true if property exist otherwise false
 */
-console.log(tinderUser.hasOwnProperty("isLogedIn"));//true
+// console.log(tinderUser.hasOwnProperty("isLogedIn"));//true
 
 //*****object destructuring**********//
+
+const course={
+    courseName:"javascript by hitesh sir",
+    price:"dedication",
+    courseInstructor:"Hitesh sir"
+}
+/*
+to access value we normally do 
+==> course.corseInstructor
+but what if we have to access the value again and again so it will be tedius  to write again and again course.name or course .price
+so we use object destructuring to access the keys conveniently
+*/ 
+// the method of destructuring is 
+// ==> const {}=objectname
+//course in this case so
+// const {}=course
+
+// const {courseInstructor}=course
+/*
+now after this point we dint need to write
+==>console.log(course.courseinstructor)
+to access course instructor we can simply write 
+==>console.log(courseinstructor)
+to access courseinstructor see
+*/
+// console.log(courseInstructor);
+// Hitesh sir
+/*
+moreover if you think courseinstructor is big name you can give a short name and then can access it by this name see
+*/
+const {courseInstructor:instructor}=course
+console.log(instructor);
+// Hitesh sir
