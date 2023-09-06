@@ -102,11 +102,11 @@ this we can use to check that whether the object has the specified propert it re
 
 //*****object destructuring**********//
 
-const course={
-    courseName:"javascript by hitesh sir",
-    price:"dedication",
-    courseInstructor:"Hitesh sir"
-}
+// const course={
+//     courseName:"javascript by hitesh sir",
+//     price:"dedication",
+//     courseInstructor:"Hitesh sir"
+// }
 /*
 to access value we normally do 
 ==> course.corseInstructor
@@ -131,6 +131,26 @@ to access courseinstructor see
 /*
 moreover if you think courseinstructor is big name you can give a short name and then can access it by this name see
 */
-const {courseInstructor:instructor}=course
-console.log(instructor);
+// const {courseInstructor:instructor}=course
+// console.log(instructor);
 // Hitesh sir
+
+//**********about JSON API*************//
+//API apna kam kisi aur p dalna
+/*
+==> how JSON looks 
+==>this is JSON {} inside these you see keys and values so it looks like an object but this is not an object you do not see declaration or name before these {} in JSON
+*/
+// here we have a JSON or an API almost look like this
+{
+    "courseName":"javascript by hitesh sir",
+    "price":"dedication",
+    "courseInstructor":"Hitesh sir"
+}
+// some time APIS found in array form which includes objects like below so get apis in these formats not the sipmle as above so if know methods of arrays and objects we will be able to handle these apis very easily
+[
+    {},
+    {},
+    {}
+]
+//we will handle these APIS in future but for now we will move towards functions 
