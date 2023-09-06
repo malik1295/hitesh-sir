@@ -70,12 +70,12 @@ const jsUser={
   [Symbol(key1)]: 'mykey1'
 }
 */
-//**********freez**********//
+//**********Object.freeze()**********//
 //we use this  if we want that no one can change the object 
-Object.freeze(jsUser)
+// Object.freeze(jsUser)
 // now if we change the age or anything that will not happen see
-jsUser.age=96
-console.log(jsUser);
+// jsUser.age=96
+// console.log(jsUser);
 /*
 {
   name: 'Rehman',
@@ -87,6 +87,29 @@ console.log(jsUser);
   lastloginDays: [ 'monday', 'friday' ],
   [Symbol(key1)]: 'mykey1'
 }
-==> seethe age is still 25
-==>  so by changing something after the freez will not through an error but these changes will not happen
+==> see the age is still 25
+==>  so by changing something after the freeze will not through an error but these changes will not happen
 */
+//***adding function in object*****//
+jsUser.greetings=function(){
+    console.log('Hello Js user');
+}
+//lets check
+// console.log(jsUser.greetings);
+// [Function (anonymous)]
+/*
+function does not execute only its referance comes why this because greetings is a method so you have to aplly it like method so
+*/
+// console.log(jsUser.greetings());
+// Hello Js user
+// now it works
+//*****lets form another function 
+/*
+to refer nmae we can use this.name in the string interpolation 
+==> this is used to refer the same object means JsUser and to refer its properties  
+*/
+jsUser.greetingsTwo=function(){
+    console.log(`Hello Js user ,${this.name}`);
+}
+console.log(jsUser.greetingsTwo());
+//Hello Js user ,Rehman
