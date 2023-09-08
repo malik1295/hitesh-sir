@@ -168,7 +168,7 @@ this code you will see in react or react native
 Please enter a username
 undefined
 */
-/* ==> BUTT if you want to avoid this condtion of not given username you can do that by giving a default value by yourself by doing this the username will never be undefined and the code will not enter in if block if someone not give user name
+/* ==> BUTT if you want to avoid this condtion of not given username you can do that by giving a default value by yourself by doing this the username will never be undefined and the code will not enter in if block if someone not give user name Malik will be usernam by default
 */
 
 function loginUserMessage(username="Malik"){
