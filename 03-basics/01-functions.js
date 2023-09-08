@@ -178,5 +178,24 @@ function loginUserMessage(username="Malik"){
     }
     return `${username} just logged in`
 }
-console.log(loginUserMessage());
+// console.log(loginUserMessage());
 //Malik just logged in
+
+//*****rest... operator********//
+/*
+sometime we dont know how much arguments are going to be entered by user as in case of shopping cart where user by many items and have to eneter that many prices . in this case we use this method by using three dots... before the parameters 
+now one will be able to pass many arguments and this perator will bundle them and give them in he form of array  ==> now the time we have an array we will be able to manipulate this array and lop over these values to find some or anything we want 
+see eample 
+*/
+// function calculateCartPrice(...prices){
+//     return prices
+// }
+// console.log(calculateCartPrice(200,400,500));
+// [ 200, 400, 500 ]
+// now if you give other parameters first and then use rest operator then what happen 
+function calculateCartPrice(val1,val2,...prices){
+    return prices
+}
+console.log(calculateCartPrice(200,400,500 ,600,700,450));
+// [ 500, 600, 700, 450 ]
+// this is because the fist two arguments goes to val1 and val2 and remaining goes into array of prices due to rest operator
