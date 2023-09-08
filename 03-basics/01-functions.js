@@ -106,3 +106,77 @@ in later we discuss how to avoid this by adding a check inside the function by u
 // console.log("Result:",result);
 // Rehman
 // Result: 8
+
+/* 
+ we will discuss some other ways to take parameters and arguments
+*/
+// consider the example
+
+// function loginUserMessage(username){
+//     return `${username} just logged in`
+// } 
+//now to call and print this function
+// console.log(loginUserMessage("Rehman"));
+//Rehman just logged in
+//==> but suppose some one give empty string then see output
+// console.log(loginUserMessage(""));
+// just logged in
+//==> but if some did not pas a value  then see the output
+// console.log(loginUserMessage());
+// undefined just logged in
+/*
+==> IMPORTANT: means if you did not pass a value the result would be undefined at username not a null as u can see*/
+// **** what to do if someone did not pass value of username******//
+//==> we can use an if statement inside the functin see
+// function loginUserMessage(username){
+//     if(username===undefined){
+//         console.log("Please enter a username");
+//     }
+//     return `${username} just logged in`
+// }
+// console.log(loginUserMessage());
+/*
+Please enter a username
+undefined just logged in
+*/
+// but we dont want second line to execute so what we do ? very simple use return in the if so code will not run further see 
+// function loginUserMessage(username){
+//     if(username===undefined){
+//         console.log("Please enter a username");
+//         return
+//     }
+//     return `${username} just logged in`
+// }
+// console.log(loginUserMessage());
+/*
+Please enter a username
+undefined
+*/ 
+/*====>
+another way of doing the same thing isby the use of !username this is same as username===undefined 
+this code you will see in react or react native
+*/
+// function loginUserMessage(username){
+//     if(!username){
+//         console.log("Please enter a username");
+//         return
+//     }
+//     return `${username} just logged in`
+// }
+// console.log(loginUserMessage());
+/*
+Please enter a username
+undefined
+*/
+/* ==> BUTT if you want to avoid this condtion of not given username you can do that by giving a default value by yourself by doing this the username will never be undefined and the code will not enter in if block if someone not give user name
+*/
+
+function loginUserMessage(username="Malik"){
+    if(!username){
+        console.log("Please enter a username");
+        return
+    }
+    return `${username} just logged in`
+}
+console.log(loginUserMessage());
+//Malik just logged in
