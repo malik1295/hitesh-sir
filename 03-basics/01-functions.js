@@ -199,3 +199,32 @@ function calculateCartPrice(val1,val2,...prices){
 console.log(calculateCartPrice(200,400,500 ,600,700,450));
 // [ 500, 600, 700, 450 ]
 // this is because the fist two arguments goes to val1 and val2 and remaining goes into array of prices due to rest operator
+//****objects handling by function*****//
+const user ={
+    username:"Rehamn",
+    price:435
+}
+
+function handleObject(anyObject){
+    console.log(`Username is ${anyObject.username} and price is ${anyObject.price}`);
+}
+// handleObject(user);
+// Username is Rehamn and price is 435
+//*** we can direct pass object by ourself as***//
+handleObject({
+    username:"Muhammad Nabi",
+    price:657
+})
+//Username is Muhammad Nabi and price is 657
+
+//***Array handling by function******//
+ 
+const myArray=[200,34,76,99,34]
+function returnSecondValue(getArray){
+    return getArray[1]
+}
+// console.log(returnSecondValue(myArray));
+// 34
+// we can direcly pass array inside the function call 
+console.log(returnSecondValue([54,76,98,987]));
+// 76
