@@ -78,10 +78,10 @@ ReferenceError: website is not defined
 // we can do these things in if else also
 
 if(true){
-    const username="Ziafat"
+    const username="ziafat"
     if(username==="ziafat"){
-        const website=" you-tube"
-        console.log(username+website);
+        const website=" youtube"
+        console.log(username + website);
     }
     // console.log(website);
 }
@@ -95,6 +95,5 @@ ReferenceError: website is not defined
 ==>again error comes
 ReferenceError: username is not defined
 same error we are accessing the username outside its scope so commint this and run again
-
-
+==> ziafat youtube
 */
