@@ -33,5 +33,5 @@ console.log(c);
 //==> var has global scope so it will be accessed from anywhere even if it is defined inside {}
 /*
  suppose someone declare var c= 45 before the if statement in the above example then the console will print c=24 that we declared inside if block means we have overwritten the value of c 
- ==> also if there are many programers how are writing the code then we will be confused how has write c=24  becausei write c=45 so to avoid this problem coders use let and const in programming
+ ==> also if there are many programers who are writing the code then we will be confused who has written c=24  because we are writing c=45 so to avoid this problem coders use let and const in programming
  */ 
