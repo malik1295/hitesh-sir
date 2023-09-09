@@ -37,13 +37,13 @@
  */ 
 // now lets check if we write let a outside 
 // you will see that outer a is completly independent of inner a . we cann access outer a ouside of {} and inner a inside the block of {}  see below
-let a=300
-if(true){
-    let a=10
-    const b=4
-    console.log("inner a:",a);
-}
-console.log("outer a :",a);
+// let a=300
+// if(true){
+//     let a=10
+//     const b=4
+//     console.log("inner a:",a);
+// }
+// console.log("outer a :",a);
 /*
 inner a: 10
 outer a : 300
@@ -51,16 +51,16 @@ outer a : 300
 ///******==>nested scope or scope in scope <==*******//
 //closure: iner function can access outer function
 
-function one(){
-    const username="Malik"
-    function two(){
-        const website="you-tube"
-        console.log(username);
-    }
+// function one(){
+//     const username="Malik"
+//     function two(){
+//         const website="you-tube"
+//         console.log(username);
+//     }
     // console.log(website);
 
     // two();
-}
+// }
 // one();
 // why console.log(username); because we want to see can we access username from function two because it is outside of two
 // why console.log(website); because we want to see can we access website which is defined in two outside of two 
@@ -76,3 +76,25 @@ ReferenceError: website is not defined
 
 */
 // we can do these things in if else also
+
+if(true){
+    const username="Ziafat"
+    if(username==="ziafat"){
+        const website=" you-tube"
+        console.log(username+website);
+    }
+    // console.log(website);
+}
+// console.log(username);
+
+// now run and see 
+/*
+==> first the error comes
+ReferenceError: website is not defined
+=>this is good because we are accessing the website outside its scope so we need to commint this and run again
+==>again error comes
+ReferenceError: username is not defined
+same error we are accessing the username outside its scope so commint this and run again
+
+
+*/
