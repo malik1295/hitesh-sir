@@ -71,7 +71,7 @@ ReferenceError: website is not defined
 => and this is very right because website is not defined in one so we cannot access it outside of one  so bassically what happend is two() was never executed because error appeared in console.log(website); so we commint this out  and again run now the two() will execute  and we have  
 // ===> Malik
 => this means we are able to access the username from inside the function two  although it is defined outside the block of two SURPRISING?
-===> this is like k ek bcha icecream le skta h ya cheen skta h elder se but elder ye kan ni kre ga kbi  bhi
+===> this is like k ek bcha icecream le skta h ya cheen skta h elder se but elder ye kam ni kre ga kbi  bhi
 ==> so the inner scope can access the values ouside of its scope but outer scope cannot access the values fron the inner scope WHEN THERE IS A SCOPE IN SCOPE SITUATION
 
 */
@@ -96,4 +96,26 @@ ReferenceError: website is not defined
 ReferenceError: username is not defined
 same error we are accessing the username outside its scope so commint this and run again
 ==> ziafat youtube
+*/
+//**** another concept*******//
+// we define two functions by two ways 
+//this is sipmle function
+console.log(addOne(5));
+function addOne(num){
+    return num+1
+}
+/*
+in this case we can execute the function even above the function body as you can see 
+*/
+
+//this time function is stored in some variable this variable is sometime called expression here addTwo is expression of function
+console.log(addTwo(5));
+const addTwo= function(num){
+    return num+2
+}
+/*
+but in this case there will be error  as 
+ReferenceError: Cannot access 'addTwo' before initialization
+so here we cannot execute function above the body of function 
+==>>this will be more clear when we study HOISTING concept 
 */
