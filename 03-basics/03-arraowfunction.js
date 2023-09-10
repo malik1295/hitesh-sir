@@ -55,10 +55,47 @@ so in node environment we get {} empty object from console.log(this); but if you
 // one();
 //see now it gives a lot of information 
 // but if u give username and print using this in function can we do this see?
-function one(){
+// function one(){
+//   username="ASAD"
+//   console.log(this.username);
+// }
+// one();
+//ASAD its working
+//******Arrow functon+++++()=>{} ****//
+/*
+this is formed by removing function keyword and adding => after ()
+see below 
+ atthe last also we check that whether this keyword works in arraow function or not 
+*/
+//basic syntax is ()=>{}
+//we can stire it in variable as say
+//const addTwoNum= () => {}
+// EXAMPLE==>
+// const addTwoNum=(num1,num2)=>{
+//   return num1+num2
+// }
+// console.log(addTwoNum(4,7));
+//11
+//==>implicit return method
+// in this {} are not needed and return also not needed
+// const addTwoNum=(num1,num2)=> num1+num2
+// console.log(addTwoNum(4,7));
+//11
+// if it confuse you you can write it in () as (num1+num2) notice if you use {} you need to write return keyword also but for () you dont need 
+const addTwoNum=(num1,num2)=> (num1+num2)
+console.log(addTwoNum(4,7));
+//11
+// to return object use () around object dont write only object 
+
+const objectreturn=()=> ({username:"Malik"})
+console.log(objectreturn());
+// { username: 'Malik' }
+//**** use of this in arraow functon****//
+// now we wil see this. wrok in arrow function or not see the example
+const one=() => {
   username="ASAD"
   console.log(this.username);
 }
 one();
-//ASAD its working
-//******Arrow functon+++++ ()=>{} ****//
+// undefined
+// means this dont work in arrow function
