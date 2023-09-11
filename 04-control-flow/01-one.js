@@ -50,16 +50,28 @@
 /*
  and this should happen because power is defined inside the if block so its scope is there onlu we cannot access it outside of its scope  
  */
-// BUTTT usoing var instead of const see
-const score=200
-if (score>100) {
-    var power="fly"
-    console.log(`user power, ${power}`);
-}
-console.log(`user power, ${power}`);
+// BUTTT  by using var instead of const see
+// const score=200
+// if (score>100) {
+//     var power="fly"
+//     console.log(`user power, ${power}`);
+// }
+// console.log(`user power, ${power}`);
 //==>> user power, fly
 //==>> user power, fly
 /*
 now both are executed this is because var has totally global scope so it can be accessed outside of its declaration block but const has block scope 
 that is the problem with var because it leaks out of block thats why we use let and const 
 */
+//****short hand notation of if******//
+//{} are not used so what is the scope?
+//here scope is iplicit  
+// but avoid to use it because readability of this method is very poor so it is not considered good practice 
+
+const balance =1000
+if(balance>500) console.log("test");
+//==>> test
+// to add more console use comma , and end with ; necessary
+if(balance>500) console.log("test"),console.log("good");
+//==>> test
+//==>> good
