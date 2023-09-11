@@ -1,6 +1,8 @@
 //****switch syntax*****//
 /*
-here key means the variable and value means its different values which are being checked 
+==>> here key means the variable and value means its different values which are being checked 
+==> when the case match then code afte this match will run throughout except the default case
+==>> to avoid this break; is used 
 
 switch (key) {
     case value:
