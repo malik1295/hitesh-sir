@@ -68,10 +68,42 @@ that is the problem with var because it leaks out of block thats why we use let 
 //here scope is iplicit  
 // but avoid to use it because readability of this method is very poor so it is not considered good practice 
 
-const balance =1000
-if(balance>500) console.log("test");
+// const balance =1000
+// if(balance>500) console.log("test");
 //==>> test
-// to add more console use comma , and end with ; necessary
-if(balance>500) console.log("test"),console.log("good");
+// to add more console use comma , and end with ;  it is necessary
+// if(balance>500) console.log("test"),console.log("good");
 //==>> test
 //==>> good
+//******nested if means if else if*****//
+ const balance = 1000
+ if(balance<500){
+  console.log("less than 500");
+ }else if(balance<750){
+  console.log("less than 750");
+ }else if(balance<900){
+  console.log("less than 900");
+ }else {
+  console.log("less than 1200");
+ }
+ //==>> less than 1200
+ //****checking multiple conditions in if******//
+ // some practicle example to by course u need
+ const userLoggedIn=true
+ const debitCard=true
+ const loggedInFromGoogle= false
+ const loggedInFromEmail=true
+ if (userLoggedIn && debitCard) {
+  console.log("Allow to by course");
+ }
+ //==>> Allow to by course
+ // this will work if both conditions are satisfied 
+ // now if we want that the user allowed to logged in either from google or email or both then we use OR operator || see
+ if (loggedInFromGoogle || loggedInFromEmail) {
+  console.log("user is logged in");
+ }
+ //==>> user is logged in
+ /*
+ ==>> && will evaluate to true if both conditions are true
+ ==>> ||will evaluate to true if even one condition is true
+ */
