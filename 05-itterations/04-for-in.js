@@ -36,3 +36,28 @@ rb is the shortcut for ruby on rail
 cpp is the shortcut for c++
 swift is the shortcut for swift by apple
 */
+// for in for arrays
+const programming=["js","rb","py","cpp","java"]
+for (const key in programming) {
+    console.log(key);
+}
+// this gives indexes only not their values which basically are keys of array
+// now for values in these keys
+for (const key in programming) {
+    console.log(programming[key]);
+}
+//==>>***maps are not iteratable by this
+//check by this
+const map=new Map()
+// now we set keys and values in map
+map.set('pak','Pakistan')
+map.set('usa','America')
+map.set('uk','England')
+// now lets print what is in map
+// console.log(map);
+//now for in loop on map
+//if u do this 
+for (const key in map) {
+   console.log(key);
+}
+// nothing happen because maps are not iteratable by this
