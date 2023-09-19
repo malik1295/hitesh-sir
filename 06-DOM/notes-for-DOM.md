@@ -46,6 +46,7 @@ by this you an get text content of the selected portion such as here what is wri
 now you see that these also return the same thing means the text content but what is the use of these 
 actually there is the difference between 
 **title.textContent** and **title.innerText**
-for this diifernce we add some content in span in the h1 tag 
+for this diifernce we add some content in span in the h1 tag but then add a style in span tag that display:none
+now if you use **title.iinerText** it will the text which is vissible but if you write **title.textContent** this gives you the whole text inside the title portion 
 
 
