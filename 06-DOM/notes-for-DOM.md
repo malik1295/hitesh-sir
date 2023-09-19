@@ -44,9 +44,37 @@ by this you an get text content of the selected portion such as here what is wri
 ## 8. title.innerText
 ## 9. title.innerHTML
 now you see that these also return the same thing means the text content but what is the use of these 
+innerHTML is very easy it gives you all the things means text and htnl both means wahtever you write in title portion  but
 actually there is the difference between 
 **title.textContent** and **title.innerText**
 for this diifernce we add some content in span in the h1 tag but then add a style in span tag that display:none
-now if you use **title.iinerText** it will the text which is vissible but if you write **title.textContent** this gives you the whole text inside the title portion 
+now if you use **title.iinerText** it will the text which is vissible but if you write **title.textContent** this gives you the whole text inside the title portion even which is hidden by some css property as we have done
+## 10. document.querySelector('tagname or id name class name')
+for example
+**document.querySelector('h1')**
+this gives the first h1 tag from all the h1 tags that re in the page
+as there is normally only one h1 in page so it gives yoy that 
+we can select id or class also this is more **like in css selectors** when we write id by # sign and class by . sign we can select here also like this
+FOR id
+**document.querySelector('#title')**
+FOR class
+**document.querySelector('.heading')**
+we can also use it for other tags such as for input as 
+**document.querySelector('input')**
+we can select input using its type as 
+**document.querySelector('input[type="pasword"]')**
+using css selectors we can access many things such as
+**document.querySelector('p:first-child')**
+ suppose we have an unordered list in which three li items are there
+ **trick to do this in html** is ul>li*3
+ now suppose we want to change he color of first li for this we first slect ul then store it in variable myul and then again use query selector to do that
+ **myul=document.querySelector('ul')**
+ now we use queryselector on myul
+ **myul.querySelector('li')**
+ this gives first li now store in other variable and run what u want
+ **myli=myul.querySelector('li')**
+ now to change color we use 
+ myli.style.backgroundColor='green'
+
 
 
