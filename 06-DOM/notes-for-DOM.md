@@ -10,3 +10,8 @@ we can do that by
 now the most important thing is to understand this document object . what it contains how many childs it have how many siblings of these childs are there in it .**Understanding this document object is very important for DOM**
 ## accessing div, heading,paragraph or any tag is possible if u know the **id** or **class** it contained
 for this we use different methods we see all these one by one 
+## 1.document.getElementById('idname')
+this is the way to target element by id 
+as in our one.html we target h1 by id as 
+**document.getElementById('title')**
+because we have given title id in h1 tag
