@@ -28,3 +28,24 @@ by this we can rewrite the attribute for example if want to overite class then w
 **document.getElementById('title').setAttribute('class','test')**
 this will change the previou class name by test means it will overwite definately
 
+now for furthur disussion we store our title portion in some variable and then we can play with it easily so 
+**const title=document.getElementById('title')**
+now we can use more methode on title as 
+## 5. title.style
+by this we can give some css to our selected element suh as background color padding etc as follows
+**title.style.backgroundColor='green'**
+**title.style.padding="15px"**
+**title.style.borderRadius='10px'**
+and many more
+
+++now how you will get or add content in the page see ++
+## 6. title.textContent
+by this you an get text content of the selected portion such as here what is written in title id portion we will get that
+## 8. title.innerText
+## 9. title.innerHTML
+now you see that these also return the same thing means the text content but what is the use of these 
+actually there is the difference between 
+**title.textContent** and **title.innerText**
+for this diifernce we add some content in span in the h1 tag 
+
+
