@@ -85,6 +85,16 @@ to check this hold it in variable and run methods
 **const list=document.querySelectorAll('li')**
 but we can run some methods by giving the position of element on nodelist as 
 **list[0].style.color="green"**
+so in order to change the propoerties you need to give the index in the node list while using  queryselectorAll
+also you will see that foreach can be applied to nodelist so
+list.forEach(function(l){
+    l.style.color="yellow"
+})
+all list elements will turned yellow means forEach is working on nodelist
+if you want to use maps or reduce methods we need to convert this nodelist into an array
+ ## 12. document.getElementByClassName
+ 
+
 
 
 
