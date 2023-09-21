@@ -76,6 +76,17 @@ using css selectors we can access many things such as
  now to change color we use 
 **myli.style.backgroundColor='yellow'**
 also you can give padding or can change iiner text or aything u want from the previous knowledge
+## 11. document.querySelectorAll()
+for example if we use this as 
+**document.querySelectorAll('li')**
+this will give us a **node list**
+now this node list contains all li butt remember that this is not an array so we cannot run methods on it directly
+to check this hold it in variable and run methods
+**const list=document.querySelectorAll('li')**
+but we can run some methods by giving the position of element on nodelist as 
+**list[0].style.color="green"**
+
+
 
 
 
