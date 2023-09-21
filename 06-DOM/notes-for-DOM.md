@@ -74,7 +74,10 @@ using css selectors we can access many things such as
  this gives first li now store in other variable and run what u want
  **myli=myul.querySelector('li')**
  now to change color we use 
- myli.style.backgroundColor='green'
+**myli.style.backgroundColor='yellow'**
+also you can give padding or can change iiner text or aything u want from the previous knowledge
+
+
 
 
 
