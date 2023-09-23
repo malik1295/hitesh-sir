@@ -1,4 +1,5 @@
 ## CREATING NEW ELEMENTS IN HTML PAGE USING JS DOM
+## parent child relation(two.html)
 **now we are working with two.html**
 ## parent to child
 first what we do is to see what is inside our parent elememnt so we select it with query selector and we have given class name parent so we write
@@ -41,3 +42,15 @@ so we can go from this child to parent in an optimize way as
 this gives you a nodelist but it does not give name of days instaed it is a complex tree structure and interestingly it give 9 value but you will see in parent div there are 4 childs only 
 actullay this counts line break also a sits elemtnt as text node as u see in two.html
 **importance**THE Whole react is based on these childnodes 
+## ELEMENT CREATION (three.html file)
+for this we use 
+**document.creatElement('name of element')**
+this creates a div element 
+we can give or class name to this dive as 
+ const div=document.creatElement('name of element')
+ div.className="main"
+ div.id="myId"
+ we can give attributes and styling to it buttttttt we still are  not be able to inject it nto the body of html through js 
+ for this we will do this
+ **document.body.appendChild("div")**
+you can make a function for this and run a function by giving arguments to it which create the elememnts or run a loop on array which change the properties and many other things as we see in four.html
