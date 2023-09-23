@@ -93,7 +93,15 @@ list.forEach(function(l){
 all list elements will turned yellow means forEach is working on nodelist
 if you want to use maps or reduce methods we need to convert this nodelist into an array
  ## 12. document.getElementByClassName
+ **document.getElementByClassName('list-item')**
+ this gives HTMLcollection in return and if you see in its prototype it does not contain any method for looping
+ if we save this in variable and then convert this into an array we can use looping method then
+ const list2=document.getElementByClassName('list-item')
+ **convertion of htmlcollection into array**
+ Array.from(list2)
+ this convert list2 in an array
  
+
 
 
 
