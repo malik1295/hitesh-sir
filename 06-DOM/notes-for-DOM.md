@@ -98,8 +98,16 @@ if you want to use maps or reduce methods we need to convert this nodelist into 
  if we save this in variable and then convert this into an array we can use looping method then
  const list2=document.getElementByClassName('list-item')
  **convertion of htmlcollection into array**
- Array.from(list2)
+ **Array.from(list2)**
+ const myArr=Array.from(list2)
  this convert list2 in an array
+ now when we have arrray we can aplly methods forexample we can apply forEach as 
+ myArr.forEach(function(li){
+    li.style.color="yellow"
+ })
+ this makes the each li text to yellow
+ 
+
  
 
 
