@@ -1,4 +1,5 @@
 <!-- edit and remove DOM elements -->
+<!-- for explnation use ADD-REMOVE.md  -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,6 +13,49 @@
     </ul>
 </body>
 <script>
+    // initialy we have one li in ul as we see
     //now we want to add more languages  in our ul for this we make a function as
+    function addLang(langName){
+        // now first we need to creat an li element and then we have to append it in ul 
+       const li= document.createElement('li')
+       //now we add some value in this li as
+       li.innerText=`${langName}`;
+       //now to enter this li in ul 
+       document.querySelector('.language').appendChild(li);
+    }
+    // addLang('Python');
+    // addLang('Typescript');
+    /*
+     but there is some problem with this method the whole tree is to be traversed everytime an element is added so an optimized approach using DSA is 
+     */
+    function addLangNewMethod(langName){
+        const li= document.createElement('li');
+        li.appendChild(document.createTextNode(langName))
+        document.querySelector('.language').appendChild(li);
+    }
+    addLangNewMethod('Python');
+    addLangNewMethod('Typescript');
+    addLangNewMethod('Golang');
+    //EDIT EXAMPLE 1
+    // now we want to edit these elements 
+    // we want to select second li 
+    const secondLang=document.querySelector('li:nth-child(2)');
+    // very easy to play with as we can have 
+    // secondLang.innerHTML="Mojo";
+    // but this is not an optimized way so we do this as 
+    const newLi=document.createElement('li');
+    newLi.textContent="Mojo";
+    // now we can use new method to add this at the place of second li as
+    secondLang.replaceWith(newLi);
+    //EDIT EXAMPLE 2
+    // editing first language 
+    const firstLang=document.querySelector('li:first-child');
+    firstLang.outerHTML="<li>C++</li>";
+    //REMOVING ELEMENT
+    //this is very easy for example we want to remove the last li 
+    const lastLang=document.querySelector("li:last-child");
+    lastLang.remove();
+    // this remove Golang
+
 </script>
 </html>
