@@ -51,21 +51,101 @@ alert("owl clicked again")
 it tels many thing if u **console.log(e)** you will get lot of information in console when you  click on owl it gives position of mouse as clientx or clienty or timestamp of clicking time about the position and nature of the place where you clicked
 */
 
-document.getElementById('owl').addEventListener('click',function(e){
-console.log(e);
-},false)
+// document.getElementById('owl').addEventListener('click',function(e){
+// console.log(e);
+// },false)
+
 // now what we should read in events
 /*
 1.type
 2.timestamp
 3.preventDefault
-4.target
+4.e.target==>> gives from where event is happening
 5.toElement
 6.srcElement
 7.currentTarget
 8.position related as==>>clientX,clientY,screenX,screenY
 9.keyboard events ==>> altkey,ctrlkey,shiftkey,keycode
 */
+//***********EVENT PROPAGATION(bubling up from down to top)**************//
+/*
+it has two context
+1.event bubling ==>>default false
+2.event capturing ==>> using true
+For this this we will talk about effect of true or false in 
+==>> addEventListner('click',function(){},false)
+in market mostly work is done by default false which is event bubling
+here we discuss two examples
+*/
+//*********BUBLING MODE**********//
+/*
+document.getElementById('images').addEventListener('click',function(e){
+console.log('clicked inside the image');
+},false)
+document.getElementById('owl').addEventListener('click',function(e){
+console.log('owl clicked');
+},false)
+*/
+/*
+        Interesting thing to note is that in console
+==>when u click on any iamge first message shuld printed
+==>when you clic on owl 2nd message shuld print
+==>> BUUT as owl is also inside the image id so the first message shuld also be printed and that will also but the QUESTION: is that which shuld print first? image message or owl message
+==>> we see fisrst message is owl clicked and second message is clicked inside the image so event bubles from in to out means from **image>li>ul** this is what we called bubling mode which is also default mode even if you dont write false it will work
+==>>so event bubling mode work from BOTTOMM to TOP
+*/
+//************CAPTURING MODE**************//
+// this will be reverse of above 
+/*
+document.getElementById('images').addEventListener('click',function(e){
+console.log('clicked inside the image');
+},true)
+document.getElementById('owl').addEventListener('click',function(e){
+console.log('owl clicked');
+},true)
+*/
+/*
+the result will be now
+clicked inside the image
+ owl clicked
+ ==>> so event capturing mode work from TOP to BOTTOM
+ CONCLUSION: Both are right it depends on the use case and more importantly good for knowledge 
+ */
+//************stopPropogation()***************//
+// now if you want to stop bubling we can do it bt e.stopPropogation see
+/*
+document.getElementById('images').addEventListener('click',function(e){
+console.log('clicked inside the image');
+},false)
+document.getElementById('owl').addEventListener('click',function(e){
+console.log('owl clicked');
+e.stopPropagation()
+},false)
+*/
+// now when we click on owl it will not propagate or buble out 
 
+//*************preventDefault()**************//
+// this is used when we dont want to get the default behaviour to show
+//before this when you click on Google it will get you to google website
+/*
+document.getElementById('google').addEventListener('click',function(e){
+    console.log('Google clicked');
+e.preventDefault();
+e.stopPropagation();
+},false)
+*/
+// now it will not go to website when we click on Google
+// also we added stop propagation to stop bubling
+//*******some activity************//
+// when we click on image it just removed 
+document.querySelector('#images').addEventListener('click',function(e){
+    // parent node of target
+console.log(e.target.parentNode);
+//now to remove this parent node one way is 
+let removeIt=e.target.parentNode
+removeIt.remove();
+// another way of doing the same is 
+// removeIt.parentNode.removeChild(removeIt)
+})
 </script>
 </html>
