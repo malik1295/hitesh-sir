@@ -1,3 +1,4 @@
+<!-- manipulation of Browser events in script tag -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -18,4 +19,53 @@
         </ul>
    </div>
 </body>
+<script>
+//********************FIRST METHOD ********************//
+/*
+add addevent in that particular tag for example we can add on click event on owl in its tag as  
+==>> onclick="alert('owl')"
+==>> this will work but this method is not feasiable when we are in large scale projects so this method is not preffered so dont inject code directly in html
+*/
+//*****************SECOND METHOD************************//
+/*
+document.getElementById('owl').onclick=function(){
+    alert("owl clicked")
+}
+==>>this is good method butt there is also a problem with this method we dont get enough information by onclic method this gives less features than the next method so to get more information from click events we use **ADDEVENTLISTNER** methods because these methods gives us the abbility of **PROPOGATION**
+*/
+//*******************THIRD METHOD(BEST ONE)**************************//
+// ==>>adeEentlistner
+// ==>> this method can listen many events like mouse ,keyboard, clic,submit ,drag and drop,
+/*
+document.getElementById('owl').addEventListener('click',function(){
+alert("owl clicked again")
+})
+*/
+//==>>sometime a third parameter false is also given in **==>>('click',function(){},false) **as this is set by default false so it is not necessery to mention it thats why we did not use this but  some time the statement does not complete without writing true or false 
+//OTHER METHODS 
+//attachEvent()==>> this was used in earlytimes in internet explorer
+//in JQuery .on  event is used
+//************some working on event ****************//
+/*
+==>>more you read about event object more will be benificial this for you 
+it tels many thing if u **console.log(e)** you will get lot of information in console when you  click on owl it gives position of mouse as clientx or clienty or timestamp of clicking time about the position and nature of the place where you clicked
+*/
+
+document.getElementById('owl').addEventListener('click',function(e){
+console.log(e);
+},false)
+// now what we should read in events
+/*
+1.type
+2.timestamp
+3.preventDefault
+4.target
+5.toElement
+6.srcElement
+7.currentTarget
+8.position related as==>>clientX,clientY,screenX,screenY
+9.keyboard events ==>> altkey,ctrlkey,shiftkey,keycode
+*/
+
+</script>
 </html>
