@@ -137,15 +137,23 @@ e.stopPropagation();
 // now it will not go to website when we click on Google
 // also we added stop propagation to stop bubling
 //*******some activity************//
-// when we click on image it just removed 
+// when we want that when we click on image it just removed 
+ 
 document.querySelector('#images').addEventListener('click',function(e){
-    // parent node of target
-console.log(e.target.parentNode);
-//now to remove this parent node one way is 
-let removeIt=e.target.parentNode
-removeIt.remove();
+console.log(e.target.tagName);
+if(e.target.tagName==="IMG"){
+    //print target id for info only
+    console.log(e.target.id);
+    let removeIt=e.target.parentNode
+    removeIt.remove();
+}
 // another way of doing the same is 
 // removeIt.parentNode.removeChild(removeIt)
 })
+
+/*
+BUT BUT BUT carefully note that when we click near the google everything is removed SURPRISING? This is happening becuase we are clicking on list item and the parent of li is ul so Whole ul will be removed.
+==>>now we dont want this to be happen so we should add some checks in the above function  using if see
+*/
 </script>
 </html>
