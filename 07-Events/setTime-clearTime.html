@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Project with Sir Hitesh</h1>
+    <button id="stop">Stop</button>
+</body>
+<script>
+    //something about function 
+    //setTimeout()
+    /*
+    setTimeout(function(){
+        console.log("AR MALIK");
+    },2000)
+    */
+    // this will print name after 2 second when you run file So it will execute ONCE whatever you want after a specified time time
+    // we can can also do it by passing referance of function at handler  as
+    const sayMalik=function(){
+        console.log("AR MALIK");
+    }
+    setTimeout(sayMalik,2000);
+    // in similar way we can cahnge h1 by calling it in a function see
+    const changeH1=function(){
+        document.querySelector('h1').innerHTML="LEARNER IS AR MALIK";
+    }
+    // setTimeout(changeH1,2000);
+
+    // USES: sometime you when you go to website then after some seconds popup appears on screen these are due to setTime() methods 
+    //******the problem come when you want to stop this thing during that time*****//
+    // for this we use clearTimeout
+    //now if we give referance of changeh1 setTimeout to this then h1 will not change after 2 sec for this we hold it in variable as 
+    const changeMe=setTimeout(changeH1,2000);
+    // now for this we use stop button and want that when someone click on it the change of h1 does not takes palce    
+    document.querySelector('#stop').addEventListener('click',function(){
+        clearTimeout(changeMe)
+        console.log("STOPPED")
+    })
+   
+
+</script>
+</html>
