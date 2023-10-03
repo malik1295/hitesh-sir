@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>setInerval() WITH HITESH SIR</h1>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+</body>
+<script>
+    // setInterval() method
+    // in this the same thing happen like set timeeout and clear time out BUTT anyting given in this keeps on going after given time continuously
+    const sayDate=function(){
+        console.log("JAVA WITH MALIK",Date.now());
+    }
+    // setInterval(sayDate,1000);
+    //***clearInterval()****//
+    //now to stop it we use clear interval method by passing the referance of which we want to stop so first form referance of setinterval and pass it to clearinterval
+// const setIntervalId=setInterval(sayDate,1000);
+// clearInterval(setIntervalId);
+// but we want that this start stop thing should happpen when i click on the buttons 
+// first we do this for start button 
+document.getElementById("start").addEventListener('click',function(){
+    setInterval(sayDate,1000);
+})
+//now for stop button
+const stopMe=document.getElementById("stop");
+stopMe.addEventListener('click',function(){
+    clearInterval(setInterval(sayDate,1000));
+})
+// stop button yet not wrking we wil comeback to this soon
+</script>
+</html>
