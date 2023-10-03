@@ -23,14 +23,16 @@
 // clearInterval(setIntervalId);
 // but we want that this start stop thing should happpen when i click on the buttons 
 // first we do this for start button 
+let intervalId;
 document.getElementById("start").addEventListener('click',function(){
-    setInterval(sayDate,1000);
+   intervalId= setInterval(sayDate,1000);
 })
 //now for stop button
-const stopMe=document.getElementById("stop");
-stopMe.addEventListener('click',function(){
-    clearInterval(setInterval(sayDate,1000));
+
+document.getElementById("stop").addEventListener('click',function(){
+    clearInterval(intervalId);
 })
-// stop button yet not wrking we wil comeback to this soon
+// stop button yet not wrking we wil comeback to this soon 
+// DONE ITTTTT due to scope issue intervalId is now defined outside the start button method so now it is available everywhere 
 </script>
 </html>
