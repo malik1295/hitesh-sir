@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HMLHttp REQUEST BSICS</title>
+</head>
+<body>
+    <h1>The XMLHttpRequest Object</h1>
+    The XMLHttpRequest object can be used to request data from a web server.
+
+<!-- The XMLHttpRequest object is a developers dream, because you can:
+
+1.Update a web page without reloading the page
+2.Request data from a server - after the page has loaded
+3.Receive data from a server  - after the page has loaded
+4.Send data to a server - in the background
+some details 
+Method	                 Description
+new XMLHttpRequest()==>>Creates a new XMLHttpRequest object
+abort()	==>>Cancels the current request
+getAllResponseHeaders()==>>	Returns header information
+getResponseHeader()==>>	Returns specific header information
+open(method,url,async,user,psw)==>>	Specifies the request 
+[method: the request type GET or POST
+url: the file location
+async: true (asynchronous) or false (synchronous)
+user: optional user name
+psw: optional password]
+send()==>>Sends the request to the server
+Used for GET requests
+send(string)==>>Sends the request to the server.
+Used for POST requests
+setRequestHeader()==>>Adds a label/value pair to the header to be sent 
+
+XMLHttpRequest Object Propertie
+==>>onreadystatechange:	Defines a function to be called when the readyState property changes
+==>> readyState:Holds the status of the XMLHttpRequest.
+0: request not initialized
+1: server connection established
+2: request received
+3: processing request
+4: request finished and response is ready
+==>>responseText:Returns the response data as a string
+==>>responseXML:Returns the response data as XML data
+==>>status:	Returns the status-number of a request
+200: "OK"
+403: "Forbidden"
+404: "Not Found"
+==>>statusText:	Returns the status-text (e.g. "OK" or "Not Found")
+-->
+
+</body>
+<script>
+    //we form request url for my gitHub API
+    const requestUrl="https://api.github.com/users/malik1295";
+    const xhr=new XMLHttpRequest();
+    xhr.open('GET',requestUrl);
+    xhr.onreadystatechange
+</script>
+</html>
