@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>React</title>
+  </head>
+  <body>
+    <button>Button Clicked</button>
+  </body>
+  <script>
+    class React {
+      constructor() {
+        this.library = "React";
+        this.server = "http://laocalhost:300";
+
+        //requirement
+        document
+          .querySelector("button")
+          .addEventListener("click", this.handleClick.bind(this));
+        // to send the referance .bind(this) is used otherwise everything will work but server and library name will not shoup
+      }
+      //requirement
+      //as the page loads new object is formed from this
+      //==>> we have a referance of button
+      //==>> a method to handle click
+      // you will see the button click will hold these referances
+      handleClick() {
+        console.log("button clicked");
+        console.log(this.server);
+        console.log(this.library);
+        console.log(this);
+      }
+    }
+
+    const App = new React();
+  </script>
+</html>
